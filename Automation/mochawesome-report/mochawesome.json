@@ -1,0 +1,99 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-10-09T04:21:17.287Z",
+    "end": "2019-10-09T04:21:40.676Z",
+    "duration": 23389,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e8d2043-72d6-4b1d-b565-2d90f78b5ad4",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "88d67601-0748-4adc-a34e-1d1ddb80075e",
+          "title": "Greenkart Validation suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Add Single Product Click Checkout Cart Test Case",
+              "fullTitle": "Greenkart Validation suite Test Add Single Product Click Checkout Cart Test Case",
+              "timedOut": null,
+              "duration": 18773,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Using Environment variable defined in Cypress.json file\ncy.visit(Cypress.env(\"url\") + \"/angularpractice/\"); //PageObject model implementation\nhomePage.nameEditBox().type(this.data.name); //cy.get('select').select(\"Male\")\nhomePage.genderDropdown().select(this.data.gender); //Verify two way binding value should be name field value entered\nhomePage.twoWayDataBinding().should('have.value', this.data.name); //Verify name field minimum chars that can entered\nhomePage.nameEditBox().should('have.attr', 'minlength', '2'); //Verify enterprneur radio button disabled\nhomePage.enterpreneurCheckbox().should('be.disabled'); //Click on Shop link\nhomePage.shopTab().click(); //Select one product\ncy.selectProduct(this.data.productName); //Click on checkout cart button\nproductsPage.checkOutButtonCart().click(); //Verify checkout buttopn present\ncheckoutPage.checkoutButton().should('be.visible').should('be.enabled');",
+              "err": {},
+              "uuid": "77b1431f-32ff-46e4-9145-6bd066b6f7a8",
+              "parentUUID": "88d67601-0748-4adc-a34e-1d1ddb80075e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "77b1431f-32ff-46e4-9145-6bd066b6f7a8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18773,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {},
+      "version": "4.0.1"
+    }
+  }
+}
