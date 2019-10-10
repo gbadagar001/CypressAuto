@@ -34,6 +34,6 @@ describe('Greenkart Validation suite', function () {
     homePage.nameEditBox().should('have.attr', 'minlength', '2')
 
     //cy.get('#inlineRadio3').should('be.disabled')
-    homePage.enterpreneurCheckbox().should('be.disabled')
+    homePage.enterpreneurCheckbox().should('be.enabled')
   })
 })
