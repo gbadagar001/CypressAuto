@@ -31,9 +31,9 @@ describe('Form filling suite', function () {
     homePage.twoWayDataBinding().should('have.value', this.data.name)
 
     //cy.get('input[name="name"]:nth-child(2)').should('have.attr', 'minlength', '2')
-    homePage.nameEditBox().should('have.attr', 'minlength', '3')
+    homePage.nameEditBox().should('have.attr', 'minlength', '2')
 
     //cy.get('#inlineRadio3').should('be.disabled')
-    homePage.enterpreneurCheckbox().should('be.disabled')
+    homePage.enterpreneurCheckbox().should('be.enabled')
   })
 })
