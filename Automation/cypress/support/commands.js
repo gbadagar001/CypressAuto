@@ -11,6 +11,8 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
+//import ATLoginPage from "../../support/pageObjects/ATLoginPage"
+
 
 Cypress.Commands.add("selectProduct", (productName) => {
 
@@ -20,6 +22,17 @@ Cypress.Commands.add("selectProduct", (productName) => {
             cy.get('button.btn.btn-info').eq(index).click()
         }
     })
+
+})
+
+//const loginPage = new ATLoginPage()
+
+Cypress.Commands.add("login", (username,pwd) => {
+
+    cy.visit('https://online.actitime.com/pwc/login.do')
+    cy.get('#username').type(username)
+    cy.get('input.textField.pwdfield').type(pwd)
+    cy.get('#loginButton').click()
 
 })
 

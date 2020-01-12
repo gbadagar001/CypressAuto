@@ -7,8 +7,8 @@
     "test": "node_modules/.bin/cypress run --record",
     "headTest": "npm run test -- --headed --record",
     "chromeTest": "npm run test -- --browser chrome --headed --record",
-    "recordDashboardTest": "npm run test -- --record --key 099dffb2-90b8-4b1f-95cf-5ec3cb39aa4b  --reporter mochawesome --headed",
-    "GreenkartTest": "npm run test -- --spec \"cypress/integration/Greenkart/*\" --record"
+    "recordDashboardTest": "npm run test -- --record --key 099dffb2-90b8-4b1f-95cf-5ec3cb39aa4b  --reporter mochawesome",
+    "GreenkartTest": "npm run test -- --spec \"cypress/integration/Greenkart/*\" --record --key 099dffb2-90b8-4b1f-95cf-5ec3cb39aa4b --reporter mochawesome  --headed"
   },
   "author": "Giriyappa Badagar",
   "license": "ISC",

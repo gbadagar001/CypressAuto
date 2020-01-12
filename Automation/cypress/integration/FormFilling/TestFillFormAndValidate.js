@@ -4,7 +4,7 @@
 import HomePage from "../../support/pageObjects/HomePage"
 
 
-describe('Greenkart Validation suite', function () {
+describe('Form filling suite', function () {
   //Creating objects of page classes
   const homePage = new HomePage()
 
@@ -31,9 +31,9 @@ describe('Greenkart Validation suite', function () {
     homePage.twoWayDataBinding().should('have.value', this.data.name)
 
     //cy.get('input[name="name"]:nth-child(2)').should('have.attr', 'minlength', '2')
-    homePage.nameEditBox().should('have.attr', 'minlength', '2')
+    homePage.nameEditBox().should('have.attr', 'minlength', '3')
 
     //cy.get('#inlineRadio3').should('be.disabled')
-    homePage.enterpreneurCheckbox().should('be.enabled')
+    homePage.enterpreneurCheckbox().should('be.disabled')
   })
 })
